@@ -77,7 +77,7 @@ function Validator(
         const formGroupElement = findFormGroup(itemValidateElement);
 
         if (!formGroupElement) {
-            console.error(`Can not find form group of ${itemValidateElement.name}`);
+            throw new Error(`Can not find form group of input[name="${itemValidateElement.name}"] in Validator()`);
             return;
         }
 
@@ -119,7 +119,7 @@ function Validator(
     };
 
     if (!formSelector || !itemsValidate || !errorMessages || !formGroupSelector || !messageSelector) {
-        console.error("Please pass all the arguments to Validator()");
+        throw new Error("Please pass all the arguments to Validator()");
     }
 
     const formElement = document.querySelector(formSelector);
@@ -136,7 +136,7 @@ function Validator(
                 const rules = itemsValidate[itemValidateName].split("|").map((item) => item.trim());
 
                 if (itemValidateElements.length <= 0) {
-                    console.error(`Can not find input[name="${itemValidateName}"] in Validator()`);
+                    throw new Error(`Can not find input[name="${itemValidateName}"] in Validator()`);
                     return;
                 }
 
@@ -193,7 +193,7 @@ function Validator(
         const rules = itemsValidate[itemValidateName].split("|").map((item) => item.trim());
 
         if (itemValidateElements.length <= 0) {
-            console.error(`Can not find input[name="${itemValidateName}"] in Validator()`);
+            throw new Error(`Can not find input[name="${itemValidateName}"] in Validator()`);
             return;
         }
 
