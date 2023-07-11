@@ -30,7 +30,7 @@ The Form Validator library supports several common data validation rules:
 You can use the Form Validator library by including the following script tag in your web page:
 
 ```
-<script src="https://dangtu2212.github.io/js.form-validator/validator.js"></script>
+<script src="https://tudvh.github.io/js.form-validator/validator.js"></script>
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ To use the Form Validator library, follow these steps:
 -   Step 1: Include the library in your web page:
 
 ```
-<script src="https://dangtu2212.github.io/js.form-validator/validator.js"></script>
+<script src="https://tudvh.github.io/js.form-validator/validator.js"></script>
 ```
 
 -   Step 2: Define the data fields and validation rules in your form:
@@ -53,7 +53,7 @@ To use the Form Validator library, follow these steps:
         <span class="form-message"></span>
     </div>
 
-    <!-- Input invalid -->
+    <!-- Add class invalid in div.form-group when validate fail -->
     <div class="form-group invalid">
         <input name="fullname" />
         <span class="form-message"></span>
@@ -126,8 +126,8 @@ Validator(formSelector, itemsValidate, errorMessages, formGroupSelector, message
 
 ## Demo
 
-You can see a live demo of the Form Validator library [here](https://dangtu2212.github.io/js.form-validator).
+You can see a live demo of the Form Validator library [here](https://tudvh.github.io/js.form-validator).
 
 ## Contribution
 
-If you find any issues or have suggestions for improvement, please create an issue in the [GitHub repository](https://github.com/dangtu2212/js.form-validator/issues)
+If you find any issues or have suggestions for improvement, please create an issue in the [GitHub repository](https://github.com/tudvh/js.form-validator/issues)

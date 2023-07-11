@@ -1,4 +1,11 @@
-function Validator(formSelector, itemsValidate, errorMessages, formGroupSelector, messageSelector, onSubmit) {
+function Validator(
+    formSelector,
+    itemsValidate,
+    errorMessages,
+    formGroupSelector,
+    messageSelector,
+    onSubmit = () => {}
+) {
     const validationRules = {
         isRequired: (inputName, errorMessage) => {
             const inputElement = formElement.querySelector(`[name="${inputName}"]`);
@@ -111,7 +118,7 @@ function Validator(formSelector, itemsValidate, errorMessages, formGroupSelector
         }
     };
 
-    if (!formSelector || !itemsValidate || !errorMessages || !formGroupSelector || !messageSelector || !onSubmit) {
+    if (!formSelector || !itemsValidate || !errorMessages || !formGroupSelector || !messageSelector) {
         console.error("Please pass all the arguments to Validator()");
     }
 
